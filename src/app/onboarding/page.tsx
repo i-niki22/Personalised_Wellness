@@ -44,7 +44,7 @@ export default function Onboarding() {
             >
                 <Link href="/" className="inline-flex items-center text-stone-500 hover:text-primary mb-8 transition-colors">
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Home 1234
+                    Back to Home 
                 </Link>
 
                 <div className="text-center mb-10">
