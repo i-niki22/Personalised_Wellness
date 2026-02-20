@@ -9,16 +9,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./YOGA/frontend
-
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4  # Use v4 for latest features
+        with:
+          path: ./YOGA/frontend    # Checkout directly to frontend (optional)
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
+        if: false  # Skip if using path above; otherwise remove this
 
-      - run: npm install
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./YOGA/frontend
+
+      - name: Build
+        run: npm run build
+        working-directory: ./YOGA/frontend
