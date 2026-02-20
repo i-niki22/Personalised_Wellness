@@ -11,7 +11,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: ./YOGA/frontend
 
     steps:
       - uses: actions/checkout@v3
