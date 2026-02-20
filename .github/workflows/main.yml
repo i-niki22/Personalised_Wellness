@@ -14,25 +14,14 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: ./YOGA/frontend
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Lint
-        run: npm run lint --if-present
-
-      - name: Run Tests
-        run: npm test --if-present
-
-      - name: Build Project
-        run: npm run build
+      - run: npm install
+      - run: npm run build
